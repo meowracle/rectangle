@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex01</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1450px" height="700px" style="border: 1px solid #d3d3d3"></canvas>
+<script>
+    let Rectangle = function (width, height) {
+        this.width = width;
+        this.height = height;
+        this.area = function () {
+            return width*height;
+        }
+        this.perimeter = function () {
+            return 2*width*height;
+        }
+        this.display = function () {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.beginPath();
+            ctx.rect(100, 100, width, height)
+            ctx.stroke();
+        }
+    }
+    let a = parseInt(prompt("moi nhap vao chieu dai"));
+    let b = parseInt(prompt("moi nhap vao chieu rong"));
+    let rectangle1 = new Rectangle(a, b);
+    rectangle1.display();
+
+</script>
+</body>
+</html>
