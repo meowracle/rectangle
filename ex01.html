@@ -14,7 +14,7 @@
             return width*height;
         }
         this.perimeter = function () {
-            return 2*width*height;
+            return 2*(width+height);
         }
         this.display = function () {
             var ctx = document.getElementById("myCanvas").getContext("2d");
@@ -27,6 +27,8 @@
     let b = parseInt(prompt("moi nhap vao chieu rong"));
     let rectangle1 = new Rectangle(a, b);
     rectangle1.display();
+    alert("dien tich la: "+rectangle1.area());
+    alert("chu vi la: "+ rectangle1.perimeter());
 
 </script>
 </body>
